@@ -1,5 +1,4 @@
 import numpy as np
-from matplotlib import pyplot as plt
 
 def normalize(train, test):
   # convert from integers to floats
@@ -12,10 +11,24 @@ def normalize(train, test):
   return train_norm, test_norm
 
 def display_sample(X, y, index):
-  print(y[index])
-  IMG = X[index]
-  IMG = IMG.reshape(28,28)
-  plt.imshow(IMG)
+    '''
+    :param: X dataset containing the images
+    :param: y dataset containing the labels
+    :param: index images and labels point in the
+    dataset if index == 'random' function will pick randomly
+    
+    displays the image and the label on the given index
+    '''
+    import matplotlib.pyplot as plt
+
+    if index == 'random':
+        import random 
+        index = random.randint(0, len(X))
+
+    print(y[index])
+    IMG = X[index]
+    IMG = IMG.reshape(28,28)
+    plt.imshow(IMG)
 
 def check_cuda():
     import tensorflow as tf
