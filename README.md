@@ -1,3 +1,11 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/10QrhxfWa_F3VuywowFeogfxbpok7-ZX7?usp=sharing)
+
+
 # Conditional Generative Adversarial Nets/CGANs
 
 ![cgan](https://cdn-images-1.medium.com/max/698/0*L8loWBQIJoUrPR00.png)
@@ -10,13 +18,13 @@ Based on the following paper
 ## Usage and Getting Started
 ```
 # clone the repo
-git clone https://github.com/YigitGunduc/Spectrum.git
+git clone https://github.com/YigitGunduc/Conditional-GANs-CGANs.git
 
 # install requirements
 pip install -r requirements.txt
 
 # training the model
-python3 train.py --epochs EPOCHS --dataset mnist & fashion_mnist
+python3 train.py
 
 # generating images
 python3 generate.py LABEL
@@ -26,3 +34,16 @@ python3 generate.py LABEL
 ![cgan](https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/3682850e-dc4d-4c07-a2c8-4e58a721b65b/f50369fd-32ea-477d-b74c-1b3f6e014122/images/screenshot.gif)
 
 Source for GIF(https://www.mathworks.com/matlabcentral/fileexchange/75441-conditional-gan-and-cnn-classification-with-fashion-mnist)
+
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/YigitGunduc/Conditional-GANs-CGANs.svg?style=flat-rounded
+[contributors-url]: https://github.com/YigitGunduc/Conditional-GANs-CGANs/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/YigitGunduc/Conditional-GANs-CGANs.svg?style=flat-rounded
+[forks-url]: https://github.com/YigitGunduc/repo/network/members
+[stars-shield]: https://img.shields.io/github/stars/YigitGunduc/Conditional-GANs-CGANs.svg?style=flat-rounded
+[stars-url]: https://github.com/YigitGunduc/repo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/YigitGunduc/Conditional-GANs-CGANs.svg?style=flat-rounded
+[issues-url]: https://github.com/YigitGunduc/Conditional-GANs-CGANs/issues
+[license-url]: https://github.com/YigitGunduc/Conditional-GANs-CGANs/blob/master/LICENSE
+[license-shield]: https://img.shields.io/github/license/YigitGunduc/Conditional-GANs-CGANs.svg?style=flat-rounded
