@@ -16,8 +16,7 @@ dataset = 'fashion_mnist'
 cross_entropy = tf.keras.losses.BinaryCrossentropy(from_logits=True)
 learning_rate = 1e-4
 Lamda = 10
-epochs = 10 
-batch_size = 1024
+epochs = 50000
 
 
 if dataset == 'mnist':
@@ -28,6 +27,8 @@ else:
     raise RuntimeError('Dataset not found')
 
 X_train, X_test = utils.normalize(X_train, X_test)
+
+utils.display_sample(X_train, y_train, index='random')
 
 
 def discriminator_loss(real_output, fake_output):
@@ -77,7 +78,6 @@ def train_step(batch_size=512):
         generator_optimizer.apply_gradients(zip(gradients_of_generator, generator.trainable_variables))
         discriminator_optimizer.apply_gradients(zip(gradients_of_discriminator, discriminator.trainable_variables))
 
-
 def train(epochs):
     for epoch in range(1, epochs + 1):
         print(f'Epoch {epoch}/{epochs}')
@@ -86,6 +86,4 @@ def train(epochs):
         if epoch % 1000 == 0:
             save_models(epoch, learning_rate)
 
-
 train(epochs)
-
